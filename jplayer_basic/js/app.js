@@ -4,6 +4,10 @@ var setAudioMedia = function() {
     }).jPlayer('play');
 }
 
+var pauseAudio = function() {
+    $('#audio-player').jPlayer('pause');
+}
+
 $(document).ready(function() {
     $('#audio-player').jPlayer({
         supplied: 'mp3',
@@ -11,4 +15,5 @@ $(document).ready(function() {
     });
 
     $('.begin').on('click', setAudioMedia);
+    $('.pause').on('click', pauseAudio);
 });
